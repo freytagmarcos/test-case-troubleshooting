@@ -22,8 +22,11 @@ O serviço payment-api é responsável pelo processamento de pagamentos, e sua i
 1. Verificar ficar se todos as réplicas da aplicação estão Running e/ou se há algum pod reiniciando ou em crash. 
 2. Verificar no datadog se aplicação teve crescimento no tráfego.
 3. Verificar consumo de memória e cpu dos pods da aplicação.
-Listar ferramentas e comandos que usaria.
-Apontar hipóteses prováveis sobre a causa.
-Definir ações imediatas para mitigar o impacto.
-Especificar como comunicaria o progresso do incidente.
-Documentar o incidente e as melhorias preventivas.
+4. Procurar nos logs por mais erros relacionados ao banco de dados.
+5. Verificar número de conexões e uso de recursos no RDS.
+6. Valisar se há lentidão nas queries.
+## 2. Listar ferramentas e comandos que usaria.
+## 3. Apontar hipóteses prováveis sobre a causa.
+## 4. Definir ações imediatas para mitigar o impacto.
+## 5. Especificar como comunicaria o progresso do incidente.
+## 6. Documentar o incidente e as melhorias preventivas.
