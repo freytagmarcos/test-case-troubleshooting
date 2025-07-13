@@ -26,7 +26,14 @@ O serviço payment-api é responsável pelo processamento de pagamentos, e sua i
 5. Verificar número de conexões e uso de recursos no RDS.
 6. Valisar se há lentidão nas queries.
 ## 2. Listar ferramentas e comandos que usaria.
+`kubectl` - kubectl get pods para ver os pods que estão em execução ou restartando, kubectl describe pod para obter dados do liveness e readiness, kubectl logs para visualizar logs e kubectl top pod para obter consumo de recursos.
+
+`datadog` - visualizar métricas da aplicação e banco de dados.
+
+`dbeaver` ou outro cliente sql - para obter dados de queries em execução no banco de dados.
+
 ## 3. Apontar hipóteses prováveis sobre a causa.
+
 ## 4. Definir ações imediatas para mitigar o impacto.
 ## 5. Especificar como comunicaria o progresso do incidente.
 ## 6. Documentar o incidente e as melhorias preventivas.
