@@ -22,9 +22,11 @@ O serviço payment-api é responsável pelo processamento de pagamentos, e sua i
 1. Verificar ficar se todos as réplicas da aplicação estão Running e/ou se há algum pod reiniciando ou em crash. 
 2. Verificar no datadog se aplicação teve crescimento no tráfego.
 3. Verificar consumo de memória e cpu dos pods da aplicação.
-4. Procurar nos logs por mais erros relacionados ao banco de dados.
+4. Procurar nos logs por mais erros relacionados ao banco de dados e ou.
 5. Verificar número de conexões e uso de recursos no RDS.
 6. Valisar se há lentidão nas queries.
+7. Validar string de conexão com o banco de dados.
+8. Verificar no datadog por outras conexões com apis ou serviços parceiros.
 ## 2. Listar ferramentas e comandos que usaria.
 `kubectl` - kubectl get pods para ver os pods que estão em execução ou restartando, kubectl describe pod para obter dados do liveness e readiness, kubectl logs para visualizar logs e kubectl top pod para obter consumo de recursos.
 
@@ -33,7 +35,15 @@ O serviço payment-api é responsável pelo processamento de pagamentos, e sua i
 `dbeaver` ou outro cliente sql - para obter dados de queries em execução no banco de dados.
 
 ## 3. Apontar hipóteses prováveis sobre a causa.
+1. Aumento do tráfego na aplicação devido a alguma campanha ou anormalidade, causando um maior número de conexões ao banco de dados.
+2. Lentidão
 
 ## 4. Definir ações imediatas para mitigar o impacto.
+1. Reiniciar pods - Encerra réplicas que podem não estar saudáveis e obter novo pool de conexão com banco de dados.
+2. Ajustar min e max pool size na connection string - Caso esteja má configurado e banco de dados esteja atingindo máximo de conexões, adequar o tamanho do pool de conexões pode desonerar o banco de dados.
+3. Aumentar o tempo connection lifetime
 ## 5. Especificar como comunicaria o progresso do incidente.
 ## 6. Documentar o incidente e as melhorias preventivas.
+
+
+
