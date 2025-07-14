@@ -64,9 +64,13 @@ Novo update em: 12:45.
 
 ### Descrição
 Data/hora do alerta
+
 Descrição do alerta
+
 Ações efetuadas
+
 Tempo até mitigação 
+
 Tempo até resolução
 
 ### Causa raiz (RCA)
@@ -74,14 +78,19 @@ Detalhar o que causou o problema, por exemplo, esgotamento de conexões no banco
 
 ### Impacto
 Tempo de instabilidade
+
 Pedidos perdidos/faturamento impactado
 
 ### Melhorias preventivas
 Implementar pool de conexões (ou ajustar pool atual)
+
 Monitorar número de conexões e uso do banco com alerta dedicado
+
 Teste de carga automatizado semanalmente ou quinzenalmente
 
 ### Ação contínua
 Análise de performance do banco
+
 Código para fechar conexões corretamente
+
 Limites de recursos revisados
